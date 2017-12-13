@@ -55,7 +55,6 @@ public class PostController {
         establishedPost.setUnit(unitService.getUnitById(establishedPostDTO.getUnit()));
         EstablishedPost savedEstablishedPost = establishedPostService.saveEstablishPost(establishedPost);
 
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/v1/posts/{id}").buildAndExpand(savedEstablishedPost.getId()).toUri();
-        return ResponseEntity.created(location).build();
+        return new ResponseEntity<>(savedEstablishedPost, HttpStatus.OK);
     }
 }
