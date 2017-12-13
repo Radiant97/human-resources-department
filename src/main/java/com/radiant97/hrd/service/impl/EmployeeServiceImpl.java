@@ -23,4 +23,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee getEmployeeById(Integer id) {
         return employeeRepository.findOne(id);
     }
+
+    @Override
+    public Employee saveEmployee(Employee employee) {
+        return employeeRepository.save(employee);
+    }
 }

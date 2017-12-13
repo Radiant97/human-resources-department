@@ -23,4 +23,9 @@ public class EstablishedPostServiceImpl implements EstablishedPostService {
     public EstablishedPost getEstablishPostById(int id) {
         return establishedPostRepository.findOne(id);
     }
+
+    @Override
+    public EstablishedPost saveEstablishPost(EstablishedPost post) {
+        return establishedPostRepository.save(post);
+    }
 }

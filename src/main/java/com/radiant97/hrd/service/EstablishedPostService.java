@@ -7,4 +7,5 @@ import java.util.List;
 public interface EstablishedPostService {
     List<EstablishedPost> getAllEstablishedPosts();
     EstablishedPost getEstablishPostById(int id);
+    EstablishedPost saveEstablishPost(EstablishedPost post);
 }

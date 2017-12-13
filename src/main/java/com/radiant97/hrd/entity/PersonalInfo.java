@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
@@ -23,6 +25,7 @@ public class PersonalInfo {
     private String firstName;
     @Nationalized
     private String lastName;
+    @Temporal(TemporalType.DATE)
     private Date birthday;
 
     private String sex;

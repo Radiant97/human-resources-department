@@ -1,5 +1,8 @@
 package com.radiant97.hrd.service;
 
-public interface PostService {
+import com.radiant97.hrd.entity.Post;
+import com.radiant97.hrd.entity.Unit;
 
+public interface PostService {
+    Post savePost(Post post);
 }

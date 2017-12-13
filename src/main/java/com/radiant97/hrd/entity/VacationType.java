@@ -9,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "post")
-public class Post {
+@Table(name = "vacation_type")
+public class VacationType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,6 +18,7 @@ public class Post {
 
     @Nationalized
     private String name;
+    private Integer daysNumber;
 
     public Integer getId() {
         return id;
@@ -33,5 +34,13 @@ public class Post {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getDaysNumber() {
+        return daysNumber;
+    }
+
+    public void setDaysNumber(Integer daysNumber) {
+        this.daysNumber = daysNumber;
     }
 }
